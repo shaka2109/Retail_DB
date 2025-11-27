@@ -4,17 +4,14 @@
 This project contains a complete relational database for a retail business, including schema creation, synthetic datasets, loading scripts, an ERD diagram, and few analytical SQL queries.  
 It is designed as a data engineering and SQL analytics portfolio project.
 
----
 
 ## 📁 Project Structure
 
 - Schema/  → SQL scripts to create tables and relationships.
 - Data/ → Synthetic CSV datasets (1000+ rows).
 - Scripts/ → Data loading script + analytical SQL.
-- Diagrams/ → ER diagrams in Mermaid and PNG.
+- Diagrams/ → ER diagrams in LucidChart and PNG.
 
-
----
 
 ## 🗄️ Database Overview
 
@@ -38,12 +35,12 @@ The schema supports:
 ## 🛠️ Tech Stack
 
 - PostgreSQL (pgAdmin 4)
-- Mermaid (for diagrams)
-- SQL (data modeling + analytics)
+- LucidChart (for diagrams)
+- DBeaver (SQL data modeling + analytics)
 
 
 
-## 🧱 Tables and relationships
+## 🧱 Tables and relationships /Schema
 
 ### Create_tables.sql
 
@@ -108,7 +105,7 @@ CREATE INDEX idx_customers_email ON customers(email);
 ```
 
 
-## 📥 Load_data.sql
+## 📥 Load_data.sql /Script
 'C:/postgres_projects/retail_db/data/
 
 ```sql
@@ -120,7 +117,7 @@ COPY orders FROM 'C:/postgres_projects/retail_db/data/orders.csv' CSV HEADER;
 COPY order_items FROM 'C:/postgres_projects/retail_db/data/order_items.csv' CSV HEADER;
 ```
 
-## 📈 Analysis_queries.sql
+## 📈 Analysis_queries.sql /Script
 
 ```sql
 -- Revenue by store
@@ -158,6 +155,6 @@ GROUP BY e.employee_id
 ORDER BY total_orders DESC;
 ```
 
-## 📊 diagrams/erd
+## 📊 diagrams/ERD
 
 <img src="/images/Logical_model.png" alt="ER Diagram" style="width: 50%; height: auto;">
